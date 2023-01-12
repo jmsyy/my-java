@@ -1,3 +1,4 @@
+package src.baseDemo;
 class Drumkit {
     boolean topHat = true;
     boolean snare = true;

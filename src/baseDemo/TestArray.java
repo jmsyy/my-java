@@ -1,3 +1,5 @@
+package src.baseDemo;
+
 class TestArray {
     public static void main(String[] args) {
        int org = 42;
