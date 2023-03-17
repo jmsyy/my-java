@@ -1,3 +1,4 @@
+package src.mathNumber;
 import java.util.ArrayList;
 
 public class SimpleGame {

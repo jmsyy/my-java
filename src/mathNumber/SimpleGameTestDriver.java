@@ -1,3 +1,4 @@
+package src.mathNumber;
 public class SimpleGameTestDriver {
     public static void main(String[] args) {
         SimpleGame game = new SimpleGame();

@@ -1,3 +1,4 @@
+package src.mathNumber;
 import java.io.*;
 public class GamePlayer {
     public String getUserPrint(String prompt) {
