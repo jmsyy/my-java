@@ -1,27 +1,42 @@
-package src.makeSong;
+import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class MyGui implements ActionListener{
-  JButton button;
+public class MyGui{
+  JFrame frame;
+  JButton button =  new JButton(" change color");
+  JButton button2 =  new JButton(" onclick me");
+  boolean flagText = true;
   public void start() {
-    JFrame frame = new JFrame();
-    button =  new JButton(" click me ");
-
-    button.addActionListener(this);
-
+    frame = new JFrame();
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+    button.addActionListener(new ColorAction());
+    button2.addActionListener(new TextAction());
 
-    frame.getContentPane().add(button);
+    MyPanel drawPanel = new MyPanel();
 
-    frame.setSize(300, 300);
+    frame.getContentPane().add(BorderLayout.SOUTH, button);
+    frame.getContentPane().add(BorderLayout.NORTH, button2);
+    frame.getContentPane().add(BorderLayout.CENTER, drawPanel);
 
+    frame.setSize(800,800);
     frame.setVisible(true);
   }
 
-  public void actionPerformed (ActionEvent event ) {
-    button.setText(" haved change ");
+  class ColorAction implements ActionListener{
+    public void actionPerformed (ActionEvent event) {
+      frame.repaint();
+    }
   }
+
+  class TextAction implements ActionListener{
+    public void actionPerformed(ActionEvent event) {
+      button2.setText(flagText?"has changed":"click me");
+      flagText = !flagText;
+    }
+  }
+
   public static void main(String[] args) {
     MyGui gui = new MyGui();
     gui.start();
