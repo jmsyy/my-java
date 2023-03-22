@@ -37,8 +37,8 @@ public class MyGui{
     }
   }
 
-  public static void main(String[] args) {
-    MyGui gui = new MyGui();
-    gui.start();
-  }
+  // public static void main(String[] args) {
+  //   MyGui gui = new MyGui();
+  //   gui.start();
+  // }
 }
